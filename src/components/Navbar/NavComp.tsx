@@ -3,7 +3,7 @@ import logo from "../../assets/logo.svg";
 import { MdOutlineClose } from "react-icons/md";
 import { HiBars3 } from "react-icons/hi2";
 const NavComp = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const navbarRef = useRef<HTMLElement | null>(null);
   const handleClickOutside = (event: MouseEvent) => {
     if (
