@@ -66,7 +66,7 @@ const NavComp = () => {
       {/* Responsive navbar  */}
       <div
         ref={navbarRef}
-        className={`fixed w-full right-0 h-full  top-0 z-50 backdrop-blur-md bg-white/10 transition-all   px-10 py-3 max-w-sm ${
+        className={`fixed w-full right-0 h-full  top-0 z-50 backdrop-blur-md bg-slate-200/10 transition-all ease-linear duration-200 px-10 py-3 max-w-sm ${
           open
             ? "translate-x-0 ease-linear duration-300 "
             : "translate-x-full duration-200 ease-linear "
