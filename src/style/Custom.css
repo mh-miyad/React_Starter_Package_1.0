@@ -1,0 +1,29 @@
+@import url(https://db.onlinewebfonts.com/c/5f15020f823b496bf0575045137d3046?family=Podcast);
+@font-face {
+  font-family: "Podcast";
+  src: url("https://db.onlinewebfonts.com/t/5f15020f823b496bf0575045137d3046.eot");
+  src: url("https://db.onlinewebfonts.com/t/5f15020f823b496bf0575045137d3046.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5f15020f823b496bf0575045137d3046.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5f15020f823b496bf0575045137d3046.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/5f15020f823b496bf0575045137d3046.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5f15020f823b496bf0575045137d3046.svg#Podcast")
+      format("svg");
+}
+
+.header-img {
+  width: 100%;
+  min-height: 400px;
+  height: 1020px;
+  background-image: url("../assets/header-image.png");
+  background-size: cover;
+  background-color: #d7d7d711;
+  background-blend-mode: hue;
+}
+
+.font-dancing {
+  font-family: "Podcast";
+}

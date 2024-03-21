@@ -3,7 +3,7 @@ import Home from "./Page/Home";
 
 const App = () => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="">
       <NavComp />
       <Home />
     </div>

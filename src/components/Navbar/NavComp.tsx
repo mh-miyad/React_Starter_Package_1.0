@@ -26,11 +26,11 @@ const NavComp = () => {
   console.log(open);
   return (
     <>
-      <nav className="fixed  left-0 right-0  top-0 z-50 backdrop-blur-md bg-white/10 px-10 py-3 ">
+      <nav className="fixed text-white left-0 right-0  top-0 z-50 backdrop-blur-0 bg-white/10 px-10 py-4 ">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* nav logo  */}
           <div className="logo">
-            <img src={logo} alt="logo" className="size-20" />
+            <img src={logo} alt="logo" className="size-24" />
           </div>
           {/* nav logo  */}
           {/* nav link */}
@@ -46,9 +46,13 @@ const NavComp = () => {
             <select
               name="language"
               id="language"
-              className="bg-transparent border-none focus:border-none focus:ring-0 transition-all ease-linear">
-              <option value="eng">ENG</option>
-              <option value="eng">BD</option>
+              className=" form-select  outline-none bg-transparent border-none focus:border-none focus:ring-0 transition-all ease-linear">
+              <option className=" text-black" value="eng">
+                ENG
+              </option>
+              <option className=" text-black" value="eng">
+                BD
+              </option>
             </select>
             <button onClick={toggle} className=" lg:hidden">
               <HiBars3 size={30} className="text-[#FA8B02] " />
