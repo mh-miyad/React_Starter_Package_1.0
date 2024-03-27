@@ -20,7 +20,7 @@ const BookingTool = () => {
           className={`flex items-center gap-2 ${
             activeTab === "public"
               ? "text-[#fca311] bg-white"
-              : "bg-transparent text-white"
+              : "bg-white/15 text-white"
           } px-10 py-3 rounded-l-xl border-r-0 border-white/50 border text-lg font-semibold drop-shadow-xl`}
           onClick={handleClickPublic}>
           <FaEarthAmericas size={20} />
@@ -30,8 +30,8 @@ const BookingTool = () => {
           className={`flex items-center gap-2 ${
             activeTab === "private"
               ? "text-[#fca311] bg-white"
-              : "bg-transparent text-white"
-          } px-10 py-3 rounded-r-xl border-l-0 border-white/50 border text-lg font-semibold drop-shadow-xl`}
+              : "bg-white/15 text-white"
+          } px-10 py-3 rounded-r-xl border-l-0  border-white/50 border text-lg font-semibold drop-shadow-xl`}
           onClick={handleClickPrivate}>
           <FaPeopleGroup size={20} />
           Private Tours
