@@ -78,3 +78,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .text-tool {
+    @apply text-2xl md:text-3xl lg:text-4xl text-blue-600;
+  }
+}

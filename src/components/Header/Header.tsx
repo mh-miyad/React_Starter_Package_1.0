@@ -1,4 +1,5 @@
 import "../../style/Custom.css";
+import BookingTool from "../BookingTool/BookingTool";
 
 const Header = () => {
   return (
@@ -11,20 +12,7 @@ const Header = () => {
           Enjoy our services for your trip anytime
         </h3>
       </header>
-
-      <div className="text-center container mx-auto">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad illum
-        placeat maiores tempora delectus asperiores id quis consequatur odit
-        odio similique eum ea repudiandae eligendi animi voluptatem magni nihil
-        iusto, sapiente tempore error sit aliquid nulla. Sed vitae accusamus
-        facere eligendi quis non debitis impedit omnis, fugiat soluta, laborum
-        enim quas? Ipsam aliquam perferendis nulla omnis eligendi expedita,
-        consectetur dolor. Repellat, nam accusantium. Voluptatum eveniet nam
-        commodi aliquid reprehenderit quas dolores dolore, ut minima cum quidem
-        magni fuga. Laborum cupiditate beatae impedit dicta accusamus voluptatem
-        tempora esse consequatur. Mollitia expedita blanditiis omnis officia
-        animi quos minus non dolor vero vitae.
-      </div>
+      <BookingTool />
     </div>
   );
 };
