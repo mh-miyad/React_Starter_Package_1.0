@@ -1,18 +1,16 @@
+import VisitCardComp from "@/components/Card/VisitCardComp";
 import Header from "@/components/Header/Header";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <main className="mt-20 max-w-7xl mx-auto ">
+      <main className="mt-20 max-w-7xl mx-auto px-5 ">
         {/*  here Start here Card item that Show The destination to go  By Bicycle */}
 
-        <div className="text-3xl ">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-          incidunt voluptas sunt similique autem earum aperiam error itaque
-          labore non! Totam quis nulla nihil fugit perspiciatis ipsam! Ut, a
-          officia.
-        </div>
+        <section className="my-20  ">
+          <VisitCardComp />
+        </section>
 
         {/*  here Start here Card item that Show The destination to go  By Bicycle */}
       </main>
