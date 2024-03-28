@@ -26,7 +26,7 @@ const NavComp = () => {
   console.log(open);
   return (
     <>
-      <nav className="fixed text-white left-0 right-0  top-0 z-50 backdrop-blur-0 bg-white/10 px-10 py-4 ">
+      <nav className="fixed text-white left-0 right-0  top-0 z-[999px] backdrop-blur-0 bg-white/10 px-10 py-4 ">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* nav logo  */}
           <div className="logo">
