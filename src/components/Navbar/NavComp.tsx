@@ -4,6 +4,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { HiBars3 } from "react-icons/hi2";
 const NavComp = () => {
   const [open, setOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const navbarRef = useRef<HTMLDivElement | null>(null);
   const handleClickOutside = (event: MouseEvent) => {
     if (
@@ -13,20 +14,31 @@ const NavComp = () => {
       setOpen(false);
     }
   };
+  // const scrollTop = window.scrollY;
+  // console.log(scrollTop);
   useEffect(() => {
-    const clickListener = document.addEventListener(
-      "mousedown",
-      handleClickOutside
-    );
-    return () => document.removeEventListener("mousedown", clickListener); // Cleanup
+    document.addEventListener("mousedown", handleClickOutside);
+    const handleScroll = () => {
+      const newScrollY = window.scrollY;
+      setScrollY(newScrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [open]);
+
   const toggle = () => {
     setOpen(!open);
   };
-  console.log(open);
+
   return (
     <>
-      <nav className="fixed text-white left-0 right-0  top-0 z-[999px] backdrop-blur-0 bg-white/10 px-10 py-4 ">
+      <nav
+        className={`fixed text-white left-0 right-0  top-0 z-[999px] backdrop-blur-0 ${
+          scrollY > 0 ? "bg-black/10 backdrop-blur-sm" : ""
+        } px-10 py-4 `}>
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* nav logo  */}
           <div className="logo">
@@ -34,11 +46,19 @@ const NavComp = () => {
           </div>
           {/* nav logo  */}
           {/* nav link */}
-          <ul className=" items-center space-x-7 hidden lg:flex ">
-            <li>Home</li>
-            <li>About US</li>
-            <li>Tour Packages</li>
-            <li>Contact US </li>
+          <ul className=" items-center  hidden lg:flex ">
+            <li className="cursor-pointer hover:bg-[#fca311]/30 hover:text-white px-4 py-2 rounded-lg">
+              Home
+            </li>
+            <li className="cursor-pointer hover:bg-[#fca311]/30 hover:text-white px-4 py-2 rounded-lg">
+              About US
+            </li>
+            <li className="cursor-pointer hover:bg-[#fca311]/30 hover:text-white px-4 py-2 rounded-lg">
+              Tour Packages
+            </li>
+            <li className="cursor-pointer hover:bg-[#fca311]/30 hover:text-white px-4 py-2 rounded-lg">
+              Contact US{" "}
+            </li>
           </ul>
           {/* nav link */}
           {/* nav button */}
@@ -70,7 +90,7 @@ const NavComp = () => {
       {/* Responsive navbar  */}
       <div
         ref={navbarRef}
-        className={`fixed w-full right-0 h-full  top-0 z-50 backdrop-blur-md bg-slate-200/10 transition-all ease-linear duration-200 px-10 py-3 max-w-sm ${
+        className={`fixed w-full right-0 h-full  top-0 z-50 backdrop-blur-md bg-[#fca311]/10 transition-all ease-linear duration-200 px-10 py-3 max-w-sm ${
           open
             ? "translate-x-0 ease-linear duration-300 "
             : "translate-x-full duration-200 ease-linear "
@@ -88,7 +108,7 @@ const NavComp = () => {
         {/* nav logo */}
 
         {/* nav link */}
-        <ul className="space-y-8 w-11/12 mx-auto text-center ">
+        <ul className="space-y-8 w-11/12 mx-auto text-center font-bold ">
           <li className="hover:font-semibold cursor-pointer text-lg caption-top capitalize">
             Home
           </li>
