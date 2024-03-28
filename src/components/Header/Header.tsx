@@ -12,7 +12,9 @@ const Header = () => {
           Enjoy our services for your trip anytime
         </h3>
       </header>
-      <BookingTool />
+      <div className="mt-14 md:mt-24 lg:mt-40 max-w-7xl w-full mx-auto md:px-5">
+        <BookingTool />
+      </div>
     </div>
   );
 };
