@@ -1,13 +1,5 @@
-import NavComp from "./components/Navbar/NavComp";
-import Home from "./Page/Home";
-
 const App = () => {
-  return (
-    <div className="">
-      <NavComp />
-      <Home />
-    </div>
-  );
+  return <div className="">hello world</div>;
 };
 
 export default App;
